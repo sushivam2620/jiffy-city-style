@@ -1,4 +1,4 @@
-import { Facebook, Twitter, Instagram, Linkedin, Apple, Smartphone, Sparkles, Gift, Zap, Star, ShoppingBag } from "lucide-react";
+import { Facebook, Twitter, Instagram, Linkedin, Apple, Smartphone, Star, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Footer = () => {
@@ -6,97 +6,86 @@ const Footer = () => {
     <footer className="bg-card border-t border-border">
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-16 md:py-24">
-        <div className="relative overflow-hidden rounded-[2.5rem] p-8 md:p-16">
-          {/* Animated Background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-jiffy-green/20 to-primary/30" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,hsl(var(--primary)/0.4),transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,hsl(var(--jiffy-green)/0.3),transparent_50%)]" />
+        <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-background via-background to-primary/5 border border-border">
+          {/* Subtle Grid Pattern */}
+          <div 
+            className="absolute inset-0 opacity-[0.03]"
+            style={{
+              backgroundImage: `linear-gradient(hsl(var(--primary)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary)) 1px, transparent 1px)`,
+              backgroundSize: '60px 60px'
+            }}
+          />
           
-          {/* Animated Floating Elements */}
-          <div className="absolute top-8 left-8 w-16 h-16 bg-primary/20 rounded-full blur-xl animate-pulse" />
-          <div className="absolute bottom-8 right-8 w-24 h-24 bg-jiffy-green/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="absolute top-1/2 left-4 w-12 h-12 bg-primary/30 rounded-full blur-lg animate-pulse" style={{ animationDelay: '0.5s' }} />
-          
-          {/* Decorative Icons */}
-          <div className="absolute top-6 right-12 text-primary/30 animate-bounce" style={{ animationDuration: '3s' }}>
-            <ShoppingBag className="w-8 h-8" />
-          </div>
-          <div className="absolute bottom-12 left-12 text-jiffy-green/30 animate-bounce" style={{ animationDuration: '2.5s', animationDelay: '0.5s' }}>
-            <Gift className="w-10 h-10" />
-          </div>
-          <div className="absolute top-1/3 right-8 text-primary/20 animate-bounce" style={{ animationDuration: '2s', animationDelay: '1s' }}>
-            <Sparkles className="w-6 h-6" />
-          </div>
-          <div className="absolute bottom-1/3 left-8 text-jiffy-green/25 animate-bounce" style={{ animationDuration: '2.8s' }}>
-            <Star className="w-7 h-7" />
-          </div>
-          
-          {/* Border Glow */}
-          <div className="absolute inset-0 rounded-[2.5rem] border border-primary/30" />
-          <div className="absolute inset-[1px] rounded-[2.5rem] border border-jiffy-green/20" />
+          {/* Gradient Orbs */}
+          <div className="absolute -top-32 -right-32 w-64 h-64 bg-primary/20 rounded-full blur-[100px]" />
+          <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-jiffy-green/15 rounded-full blur-[100px]" />
 
           {/* Content */}
-          <div className="relative z-10 text-center">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-primary/20 backdrop-blur-sm border border-primary/30 rounded-full px-5 py-2 mb-6">
-              <Zap className="w-4 h-4 text-primary fill-primary" />
-              <span className="text-sm font-semibold text-primary">Limited Time Offer</span>
-            </div>
-
-            {/* Heading */}
-            <h2 className="text-4xl md:text-6xl font-bold mb-4">
-              <span className="text-foreground">Ready to </span>
-              <span className="bg-gradient-to-r from-primary via-jiffy-green to-primary bg-clip-text text-transparent">
-                Shop?
-              </span>
-            </h2>
-
-            {/* Subheading */}
-            <p className="text-muted-foreground text-lg md:text-xl mb-4 max-w-2xl mx-auto">
-              Download the Jiffy app now and get
-            </p>
-            
-            {/* Discount Highlight */}
-            <div className="inline-flex items-center gap-3 bg-gradient-to-r from-primary to-jiffy-green text-primary-foreground font-bold text-2xl md:text-4xl px-8 py-4 rounded-2xl mb-8 shadow-lg shadow-primary/30">
-              <Gift className="w-8 h-8" />
-              <span>20% OFF</span>
-              <span className="text-lg font-medium opacity-80">on your first order!</span>
-            </div>
-
-            {/* App Store Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="group relative bg-foreground text-background hover:bg-foreground px-8 py-7 h-auto rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-primary/20">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/10 to-primary/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
-                <Apple className="w-8 h-8 mr-3" />
-                <div className="text-left">
-                  <div className="text-xs opacity-70">Download on the</div>
-                  <div className="font-bold text-lg">App Store</div>
+          <div className="relative z-10 px-8 py-16 md:px-16 md:py-20">
+            <div className="max-w-3xl mx-auto text-center">
+              {/* Offer Tag */}
+              <div className="inline-block mb-8">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary to-jiffy-green blur-lg opacity-40" />
+                  <div className="relative bg-gradient-to-r from-primary to-jiffy-green text-primary-foreground font-bold text-sm tracking-wider px-6 py-2 rounded-full">
+                    FIRST ORDER SPECIAL
+                  </div>
                 </div>
-              </Button>
-              <Button className="group relative bg-foreground text-background hover:bg-foreground px-8 py-7 h-auto rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-primary/20">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/0 via-primary/10 to-primary/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
-                <Smartphone className="w-8 h-8 mr-3" />
-                <div className="text-left">
-                  <div className="text-xs opacity-70">Get it on</div>
-                  <div className="font-bold text-lg">Google Play</div>
-                </div>
-              </Button>
-            </div>
-
-            {/* Trust Indicators */}
-            <div className="flex flex-wrap items-center justify-center gap-6 mt-8 text-muted-foreground text-sm">
-              <div className="flex items-center gap-2">
-                <div className="flex -space-x-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-yellow-500 text-yellow-500" />
-                  ))}
-                </div>
-                <span>4.9 Rating</span>
               </div>
-              <div className="w-px h-4 bg-border" />
-              <span>500K+ Downloads</span>
-              <div className="w-px h-4 bg-border" />
-              <span>Available Nationwide</span>
+
+              {/* Main Heading */}
+              <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
+                Get <span className="text-primary">20% Off</span>
+                <br />
+                <span className="text-muted-foreground/70">Your First Order</span>
+              </h2>
+
+              {/* Description */}
+              <p className="text-muted-foreground text-lg md:text-xl mb-10 max-w-lg mx-auto leading-relaxed">
+                Download the Jiffy app and experience fashion delivered to your doorstep in 30 minutes
+              </p>
+
+              {/* App Store Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <Button className="group bg-foreground text-background hover:bg-foreground/90 px-8 py-6 h-auto rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-foreground/10">
+                  <Apple className="w-7 h-7 mr-3" />
+                  <div className="text-left">
+                    <div className="text-[10px] uppercase tracking-wider opacity-60">Download on the</div>
+                    <div className="font-semibold text-base">App Store</div>
+                  </div>
+                  <ArrowRight className="w-5 h-5 ml-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                </Button>
+                <Button className="group bg-foreground text-background hover:bg-foreground/90 px-8 py-6 h-auto rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-foreground/10">
+                  <Smartphone className="w-7 h-7 mr-3" />
+                  <div className="text-left">
+                    <div className="text-[10px] uppercase tracking-wider opacity-60">Get it on</div>
+                    <div className="font-semibold text-base">Google Play</div>
+                  </div>
+                  <ArrowRight className="w-5 h-5 ml-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                </Button>
+              </div>
+
+              {/* Stats Row */}
+              <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+                <div className="text-center">
+                  <div className="flex items-center justify-center gap-1 mb-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-primary text-primary" />
+                    ))}
+                  </div>
+                  <p className="text-sm text-muted-foreground">4.9 App Rating</p>
+                </div>
+                <div className="hidden md:block w-px h-10 bg-border" />
+                <div className="text-center">
+                  <p className="text-2xl font-bold text-foreground">500K+</p>
+                  <p className="text-sm text-muted-foreground">Happy Users</p>
+                </div>
+                <div className="hidden md:block w-px h-10 bg-border" />
+                <div className="text-center">
+                  <p className="text-2xl font-bold text-foreground">30 min</p>
+                  <p className="text-sm text-muted-foreground">Avg. Delivery</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
