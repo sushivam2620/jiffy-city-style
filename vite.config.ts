@@ -4,13 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: './', // <-- Add this line to fix the blank page on Render
-  plugins: [
-    react({
-      jsxImportSource: "react",
-    }),
-    mode === "development" && componentTagger(),
-  ].filter(Boolean),
+  base: "/", // ✅ ADD THIS LINE
 
   server: {
     host: "::",
@@ -19,12 +13,12 @@ export default defineConfig(({ mode }) => ({
       ".onrender.com",
       "drapeit.in",
       "www.drapeit.in",
-    ],
   },
 
-  build: {
-    target: "esnext",
-  },
+  plugins: [
+    react(),
+    mode === "development" && componentTagger(),
+  ].filter(Boolean),
 
   resolve: {
     alias: {
