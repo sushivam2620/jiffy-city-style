@@ -4,7 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
-  base: "/", // ✅ ADD THIS LINE
+  base: "/", // ✅ Required for Render
 
   server: {
     host: "::",
@@ -13,7 +13,8 @@ export default defineConfig(({ mode }) => ({
       ".onrender.com",
       "drapeit.in",
       "www.drapeit.in",
-  },
+    ],
+  }, // 
 
   plugins: [
     react(),
