@@ -4,6 +4,7 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
+  base: './', // <-- Add this line to fix the blank page on Render
   plugins: [
     react({
       jsxImportSource: "react",
